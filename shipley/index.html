@@ -1,1 +1,37 @@
-We make shipley here.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shipley-2</title>
+  <script src="../jsPsych/jspsych.js"></script>
+  <script src="../jsPsych/plugins/jspsych-instructions.js"></script>
+  <script src="../jsPsych/plugins/jspsych-survey-text.js"></script>
+  <script src="../jsPsych/plugins/jspsych-survey-multi-choice.js"></script>
+  <link href="../jsPsych/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+</head>
+<body></body>
+<script>
+// Start timeline
+var timeline = [];
+
+// Experimenter's page
+timeline.push({
+  type: 'survey-text',
+  questions: [{prompt: "Experiment ID (ex: MEYA)"},
+    {prompt: "Participant ID (ex: 12B)"}],
+  preamble: 'Experimenter, please enter session information.',
+  button_label: 'Confirm'
+});
+
+// Instruction page
+timeline.push({
+  type: 'instructions',
+  pages: ['This is shipley2 digital.']
+});
+
+// Run timeline
+jsPsych.init({
+  timeline: timeline
+});
+
+</script>
+</html>
