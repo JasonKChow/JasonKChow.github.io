@@ -12,3 +12,7 @@ p#feedback {
   position: absolute;
   top: 80%;
 }
+
+div#jspsych-progressbar-container span {
+  display: none;
+}
