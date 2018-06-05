@@ -3,8 +3,9 @@
 <head>
   <title>S6</title>
   <script src="../jsPsych/jspsych.js"></script>
-  <script src="..jsPsych/plugins/jspsych-instructions"></script>
-  <script src="..jsPsych/plugins/jspsych-categorize-image"></script>
+  <script src="../jsPsych/plugins/jspsych-instructions.js"></script>
+  <script src="../jsPsych/plugins/jspsych-html-keyboard-response.js"></script>
+  <script src="../jsPsych/plugins/jspsych-categorize-image.js"></script>
   <!--<link href="style.css" rel="stylesheet" type="text/css"></link>-->
   <link href="../jsPsych/css/jspsych.css" rel="stylesheet" type="text/css"></link>
 </head>
@@ -24,8 +25,8 @@ var valid_responses = ['f', 'j'];
 
 // Convert valid_responses to keycode
 var keycode_responses = [
-  jsPsych.pluginAPI.convertKeyCharacterToKeyCode(valid_response[0]),
-  jsPsych.pluginAPI.convertKeyCharacterToKeyCode(valid_response[1])
+  jsPsych.pluginAPI.convertKeyCharacterToKeyCode(valid_responses[0]),
+  jsPsych.pluginAPI.convertKeyCharacterToKeyCode(valid_responses[1])
 ];
 
 // Images of spaceships
@@ -57,9 +58,9 @@ catStructure = catStructure[categoryType - 1];
 // Build trials timeline variable
 var trials = [];
 var i;
-for (i = 0; r < spaceships.length; i++) {
+for (i = 0; i < spaceships.length; i++) {
   trials = trials.concat([{
-    stimulus: spacehips[i],
+    stimulus: spaceships[i],
     key_answer: keycode_responses[catStructure[i]],
     answer: valid_responses[catStructure[i]]
   }]);
@@ -103,6 +104,16 @@ var practiceTrials = {
   post_trial_gap: interTrialInterval
 };
 
+// Add practice trial components to timeline
+timeline.push({
+  timeline: [fixation, practiceTrials],
+  timeline_variables: trials,
+  sample: {
+    type: 'without-replacement'
+  },
+  repetitions: practiceBlocks
+});
+
 // Test trials component
 var testTrials = {
   type: 'categorize-image',
@@ -118,6 +129,16 @@ var testTrials = {
     tag: 'test'
   }
 }
+
+// Add test trial components to timeline using while loop
+timeline.push({
+  timeline: [fixation, testTrials],
+  timeline_variables: trials,
+  conditional_function: function() {
+    // Currently always loops, come back to this later
+    return true;
+  }
+});
 
 // Push a finish page
 timeline.push({
