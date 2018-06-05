@@ -159,7 +159,8 @@ var testTrials = {
     }
   },
   data: {
-    tag: 'test'
+    tag: 'test',
+    correct_key: jsPsych.timelineVariable('key_answer')
   }
 }
 
@@ -182,7 +183,10 @@ timeline.push({
   type: 'instructions',
   pages: ['You have completed this experiment!'],
   show_clickable_nav: true,
-  allow_keys: false
+  allow_keys: false,
+  on_start: function(trial) {
+    jsPsych.setProgressBar(1);
+  }
 })
 
 // Run the timeline!
@@ -190,7 +194,22 @@ jsPsych.init({
   timeline: timeline,
   show_progress_bar: true,
   auto_update_progress_bar: false,
-  preload_images: spaceships
+  preload_images: spaceships,
+  on_finish: function() {
+    // Add data
+    jsPsych.data.addProperties({categoryType: categoryType});
+
+    // Get data
+    var data = jsPsych.data.get().filter({tag: 'test'}).
+    data = data.ignore([
+      'tag',
+      'trial_type',
+      'trial_index',
+      'internal_node_id'
+    ]);
+
+    data.localSave('csv', 'testData.csv');
+  }
 });
 
 </script>
