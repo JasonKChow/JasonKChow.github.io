@@ -98,9 +98,9 @@ var practiceTrials = {
   key_answer: jsPsych.timelineVariable('key_answer'),
   choices: keycode_responses,
   text_answer: jsPsych.timelineVariable('answer'),
-  correct_text: 'Correct! </br> Category: %ANS%',
-  incorrect_text: 'Incorrect. </br> Category: %ANS%',
-  feedback_duration: feedbackTime,
+  correct_text: '<p id="feedback">Correct! </br> Category: %ANS%</p>',
+  incorrect_text: '<p id="feedback">Incorrect. </br> Category: %ANS%</p>',
+  feedback_duration: feedbackTime + 100000,
   post_trial_gap: interTrialInterval
 };
 
@@ -121,8 +121,8 @@ var testTrials = {
   key_answer: jsPsych.timelineVariable('key_answer'),
   choices: keycode_responses,
   text_answer: jsPsych.timelineVariable('answer'),
-  correct_text: 'Correct! </br> Category: %ANS%',
-  incorrect_text: 'Incorrect. </br> Category: %ANS%',
+  correct_text: '<p id="feedback">Correct! </br> Category: %ANS%</p>',
+  incorrect_text: '<p id="feedback">Incorrect. </br> Category: %ANS%</p>',
   feedback_duration: feedbackTime,
   post_trial_gap: interTrialInterval,
   data: {

@@ -1,4 +1,14 @@
 #jspsych-categorize-image-stimulus {
     height: 540px;
-    width: auto;
+    width: 720px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -270px;
+    margin-left: -360px;
+}
+
+p#feedback {
+  position: absolute;
+  top: 80%;
 }
