@@ -100,7 +100,7 @@ var practiceTrials = {
   text_answer: jsPsych.timelineVariable('answer'),
   correct_text: '<p id="feedback">Correct! </br> Category: %ANS%</p>',
   incorrect_text: '<p id="feedback">Incorrect. </br> Category: %ANS%</p>',
-  feedback_duration: feedbackTime + 100000,
+  feedback_duration: feedbackTime,
   post_trial_gap: interTrialInterval
 };
 
@@ -114,6 +114,11 @@ timeline.push({
   repetitions: practiceBlocks
 });
 
+// Counter variables for test trials
+var trialCount = 0;
+var spreeCount = 0;
+var critCount = 0;
+
 // Test trials component
 var testTrials = {
   type: 'categorize-image',
@@ -125,6 +130,34 @@ var testTrials = {
   incorrect_text: '<p id="feedback">Incorrect. </br> Category: %ANS%</p>',
   feedback_duration: feedbackTime,
   post_trial_gap: interTrialInterval,
+  on_finish: function(data) {
+    // Increment trial count
+    trialCount++;
+    data.trialCount = trialCount;
+
+    // Modify data based on correctness
+    if (data.correct) { // Got it right
+      spreeCount++;
+      data.spreeCount = spreeCount;
+
+      // Change progress bar
+      jsPsych.setProgressBar(spreeCount / (criterion * spaceships.length + spaceships.length - 1));
+
+      // Check if we are at the end of a subblock and spree still is above 8
+      if (trialCount % spaceships.length === 0
+        && spreeCount >= spaceships.length) {
+        critCount++;
+      }
+        data.critCount = critCount;
+      } else { // Got it wrong
+        // Reset most counters
+        spreeCount = 0;
+        critCount = 0;
+        data.critCount = critCount;
+        data.spreeCount = spreeCount;
+        jsPsych.setProgressBar(0);
+    }
+  },
   data: {
     tag: 'test'
   }
@@ -134,9 +167,13 @@ var testTrials = {
 timeline.push({
   timeline: [fixation, testTrials],
   timeline_variables: trials,
-  conditional_function: function() {
-    // Currently always loops, come back to this later
-    return true;
+  loop_function: function(data) {
+    if (trialCount >= maxBlocks * spaceships.length * 2
+      || critCount >= criterion) {
+        return false;
+      } else {
+        return true;
+      }
   }
 });
 
