@@ -10,7 +10,10 @@
 
 p#feedback {
   position: absolute;
-  top: 85%;
+  top: 50%;
+  margin-top: 300px;
+  margin-left: -50px;
+  font-size: 20px;
 }
 
 div#jspsych-progressbar-container span {
