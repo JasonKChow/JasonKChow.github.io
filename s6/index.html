@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>S6</title>
+  <script src="../jsPsych/jspsych.js"></script>
+  <script src="..jsPsych/plugins/jspsych-instructions"></script>
+  <script src="..jsPsych/plugins/jspsych-categorize-image"></script>
+  <!--<link href="style.css" rel="stylesheet" type="text/css"></link>-->
+  <link href="../jsPsych/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+</head>
+<body></body>
+<script>
+// Experiment parameters
+var practiceBlocks = 2;
+var maxBlocks = 25;
+var subblocks = 2;
+var criterion = 4;
+
+var fixationTime = 750;
+var feedbackTime = 1000;
+var interTrialInterval = 250;
+
+var valid_responses = ['f', 'j'];
+
+// Convert valid_responses to keycode
+var keycode_responses = [
+  jsPsych.pluginAPI.convertKeyCharacterToKeyCode(valid_response[0]),
+  jsPsych.pluginAPI.convertKeyCharacterToKeyCode(valid_response[1])
+];
+
+// Images of spaceships
+var spaceships = [
+  'Stimulus/000.png',
+  'Stimulus/001.png',
+  'Stimulus/010.png',
+  'Stimulus/011.png',
+  'Stimulus/100.png',
+  'Stimulus/101.png',
+  'Stimulus/110.png',
+  'Stimulus/111.png'
+];
+
+// Category structures
+var catStructure = [
+  [0, 0, 0, 0, 1, 1, 1, 1],
+  [0, 0, 1, 1, 1, 1, 0, 0],
+  [0, 0, 0, 1, 1, 0, 1, 1],
+  [0, 0, 0, 1, 0, 1, 1, 1],
+  [0, 0, 0, 1, 1, 1, 1, 0],
+  [0, 1, 1, 0, 1, 0, 0, 1]
+];
+
+// Pick a random category structure
+var categoryType = Math.floor(Math.random() * catStructure.length) + 1;
+catStructure = catStructure[categoryType - 1];
+
+// Build trials timeline variable
+var trials = [];
+var i;
+for (i = 0; r < spaceships.length; i++) {
+  trials = trials.concat([{
+    stimulus: spacehips[i],
+    key_answer: keycode_responses[catStructure[i]],
+    answer: valid_responses[catStructure[i]]
+  }]);
+}
+
+// Start timeline
+var timeline = [];
+
+// Instruction pages text
+var page1 = 'CATEGORIZE SPACESHIPS!';
+var page2 = 'USE F or J';
+var page3 = '400 TRIALS OR BE GOOD!';
+var page4 = 'NEXT TO GOOOOOOO';
+
+// Instruction pages
+timeline.push({
+  type: 'instructions',
+  pages: [page1, page2, page3, page4],
+  show_clickable_nav: true,
+  allow_keys: false
+})
+
+// Fixation trial component
+var fixation = {
+  type: 'html-keyboard-response',
+  stimulus: '<p style="font-size: 48px;">+</p>',
+  choices: jsPsych.NO_KEYS,
+  trial_duration: fixationTime
+};
+
+// Practice trial component that don't record responses
+var practiceTrials = {
+  type: 'categorize-image',
+  stimulus: jsPsych.timelineVariable('stimulus'),
+  key_answer: jsPsych.timelineVariable('key_answer'),
+  choices: keycode_responses,
+  text_answer: jsPsych.timelineVariable('answer'),
+  correct_text: 'Correct! </br> Category: %ANS%',
+  incorrect_text: 'Incorrect. </br> Category: %ANS%',
+  feedback_duration: feedbackTime,
+  post_trial_gap: interTrialInterval
+};
+
+// Test trials component
+var testTrials = {
+  type: 'categorize-image',
+  stimulus: jsPsych.timelineVariable('stimulus'),
+  key_answer: jsPsych.timelineVariable('key_answer'),
+  choices: keycode_responses,
+  text_answer: jsPsych.timelineVariable('answer'),
+  correct_text: 'Correct! </br> Category: %ANS%',
+  incorrect_text: 'Incorrect. </br> Category: %ANS%',
+  feedback_duration: feedbackTime,
+  post_trial_gap: interTrialInterval,
+  data: {
+    tag: 'test'
+  }
+}
+
+// Push a finish page
+timeline.push({
+  type: 'instructions',
+  pages: ['You have completed this experiment!'],
+  show_clickable_nav: true,
+  allow_keys: false
+})
+
+// Run the timeline!
+jsPsych.init({
+  timeline: timeline,
+  show_progress_bar: true,
+  auto_update_progress_bar: false,
+  preload_images: spaceships
+});
+
+</script>
+</html>
