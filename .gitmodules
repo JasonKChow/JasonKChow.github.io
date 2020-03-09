@@ -1,0 +1,3 @@
+[submodule "jsEHI"]
+	path = jsEHI
+	url = git@github.com:JasonKChow/jsEHI.git
