@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Auditory Test Demo</title>
+	<script src="https://unpkg.com/jspsych@7.2.1"></script>
+	<link href="https://unpkg.com/jspsych@7.2.1/css/jspsych.css" rel="stylesheet" type="text/css" />
+	<script src="https://unpkg.com/@jspsych/plugin-browser-check@1.0.0"></script>
+	<script src="https://unpkg.com/@jspsych/plugin-preload@1.1.0"></script>
+	<script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.0"></script>
+	<script src="https://unpkg.com/@jspsych/plugin-audio-keyboard-response@1.1.0"></script>
+</head>
+
+<body></body>
+<script>
+	let trials = [
+		{
+			"TrialNum": 1,
+			"Target": "Acadian Flycatcher 1.mp3",
+			"Foil1": "Blackthroated Blue Warbler 1.mp3",
+			"Foil2": "Brown Thrasher 1.mp3",
+			"TargetLoc": 3
+		}
+	];
+
+	let knockedOut = false
+	var jsPsych = initJsPsych();
+
+	function makeTest(trial) {
+		// Add clips in nested timeline
+		let trialTimeline = []
+		let numFoils = 0
+		for (let i = 0; i < 3; i++) {
+			let tmp = {
+				type: jsPsychAudioKeyboardResponse,
+				prompt: '<b>' + keys[i] + '</b>',
+				choices: keys,
+				trial_ends_after_audio: true,
+				post_trial_gap: 250
+			}
+
+			// Check if it is the target
+			if (i + 1 == trial.TargetLoc) {
+				tmp.stimulus = './stimuli/' + trial.Target
+			} else {
+				numFoils++
+				tmp.stimulus = './stimuli/' + trial['Foil' + numFoils]
+			}
+
+			// Continue if previous trial didn't have a response
+			if (i > 0) {
+				tmp = {
+					timeline: [tmp],
+					conditional_function: d => !jsPsych.data.get().last(1).values()[0].response
+				}
+			}
+
+			trialTimeline.push(tmp)
+		}
+
+		return {
+			timeline: trialTimeline,
+			loop_function: d => !d.values().filter(d => d.response).length,
+			data: {
+				testTrial: true,
+				trialN: trial.TrialNum,
+				target: trial.Target,
+				foil1: trial.Foil1,
+				foil2: trial.Foil2,
+				corrRes: keys[trial.TargetLoc - 1]
+			}
+		}
+	}
+
+	// Timeline
+	var timeline = []
+
+	// Preload
+	timeline.push({
+		type: jsPsychPreload,
+		auto_preload: true
+	});
+
+	// Startup
+	timeline.push({
+		type: jsPsychHtmlKeyboardResponse,
+		stimulus: `
+			<p>Press any key on your keyboard to begin.</p>
+		`,
+		post_trial_gap: 500
+	});
+
+
+	// Audio check trial
+	let audioCheck = {
+		type: jsPsychAudioKeyboardResponse,
+		prompt: 'Please adjust your audio volume and follow the spoken instructions.',
+		stimulus: './stimuli/SoundCheck.mp3',
+		choices: '5',
+		trial_ends_after_audio: true,
+		post_trial_gap: 250
+	};
+
+	timeline.push({
+		timeline: [audioCheck],
+		loop_function: d => !jsPsych.pluginAPI.compareKeys(d.values()[0].response, '5')
+	});
+
+	// Instructions
+	timeline.push({
+		type: jsPsychHtmlKeyboardResponse,
+		stimulus: `
+			<p>This task will test your memory of bird songs.</p>
+			<p>We will start with birdsongs from a single species that you 
+			will have to remember.</p>
+			<p>First, you will be presented with a single bird song, remember
+			it closely.</p>
+			<p>Press any key to continue.</p>
+		`,
+		post_trial_gap: 500
+	});
+
+	timeline.push({
+		type: jsPsychHtmlKeyboardResponse,
+		stimulus: `
+			<p>Afterwards, we will test if you can recognize it against two
+			other similar bird songs from other species.</p>
+			<p>Press <b>f</b> if the first clip is the bird song you remembered</p>
+			<p>Press <b>g</b> if the second clip is the bird song you remembered</p>
+			<p>Press <b>h</b> if the third clip is the bird song you remembered</p>
+			<p>Clips will play one after another and repeat after the third, you can 
+			respond during any clip.</p>
+			<p>Respond as quickly and accurately as possible without 
+			sacrificing accuracy.</p>
+			<p>Press any key to continue.</p>
+		`,
+		post_trial_gap: 500
+	});
+
+	// Define intro trials
+	let keys = ['f', 'g', 'h']
+	let speciesN = 0
+
+	// Get target bird
+	let target = trials[0].Target
+	target = target.slice(0, target.indexOf('.') - 1).trim()
+
+	// Learning clip
+	timeline.push({
+		type: jsPsychAudioKeyboardResponse,
+		prompt: 'Bird species ' + (speciesN + 1),
+		choices: 'NO_KEYS',
+		stimulus: './stimuli/' + target + ' Repeating.mp3',
+		trial_ends_after_audio: true,
+		post_trial_gap: 250
+	})
+
+	// Single test clip
+	timeline.push(makeTest(trials[0]))
+
+	// Instructions
+	timeline.push({
+		type: jsPsychHtmlKeyboardResponse,
+		stimulus: `
+			<p>In this test, you will first hear a five second clip of a 
+			button being clicked.</p>
+			<p>After a short delay, you will hear another five second 
+			clip of a button being clicked.</p>
+			<p>You will need to determine if the two clips are the same 
+			or different buttons.</p>
+			<p>Press the <b>f</b> key for same and the <b>j</b> key for 
+			different</p>
+			<p>Press any key to continue.</p>
+		`,
+		post_trial_gap: 500
+	});
+
+	timeline.push({
+		type: jsPsychHtmlKeyboardResponse,
+		stimulus: `
+		<p>The cadence of the button clicks may change but does not matter.</p>
+		<p>The timbre, pitch, and clicking noises are relevant to differentiate
+		buttons.</p>
+		<p>Respond as quickly as possible without sacrificing accuracy.</p>
+		<p>Press any key to start.</p>
+	`,
+		post_trial_gap: 500
+	})
+
+	// Audio check trial
+	timeline.push({
+		type: jsPsychAudioKeyboardResponse,
+		prompt: 'Clip 1',
+		stimulus: './stimuli/Aliaz100g1.mp3',
+		choices: 'NO_KEYS',
+		trial_ends_after_audio: true,
+		post_trial_gap: 1000
+	})
+
+	timeline.push({
+		type: jsPsychAudioKeyboardResponse,
+		stimulus: './stimuli/CherryBrown1.mp3',
+		choices: ['j', 'f'],
+		prompt: 'Clip 2<p>Same (f) -- different (j)</p>',
+		trial_duration: 10000,
+		post_trial_gap: 1000
+	})
+
+	// End card
+	timeline.push({
+		type: jsPsychHtmlKeyboardResponse,
+		stimulus: `
+			<p>Demo complete.</p>
+		`,
+		choices: ['NO_KEYS']
+	})
+
+	// Run
+	jsPsych.run(timeline)
+</script>
+
+</html>
