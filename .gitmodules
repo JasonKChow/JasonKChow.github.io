@@ -1,3 +1,6 @@
 [submodule "jsEHI"]
 	path = jsEHI
 	url = git@github.com:JasonKChow/jsEHI.git
+[submodule "ov_demo"]
+	path = ov_demo
+	url = git@github.com:OPLabVanderbilt/ov_demo.git
