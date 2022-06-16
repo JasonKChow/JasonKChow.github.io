@@ -10,6 +10,7 @@
     <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.1"></script>
     <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.1"></script>
     <script src="https://unpkg.com/@jspsych/plugin-image-keyboard-response@1.1.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-fullscreen@1.0.0"></script>
     <script src="./trials.js"></script>
 </head>
 
@@ -55,6 +56,27 @@
     // Timeline
     var timeline = []
 
+    // Browser check
+    timeline.push({
+        type: jsPsychBrowserCheck,
+        inclusion_function: (data) => {
+            return !data.mobile
+        },
+        exclusion_message: (data) => {
+            return `
+                <p>You must use a desktop/laptop computer to participate in this 
+                experiment.</p>
+                <p>Please restart the experiment on a desktop/laptop computer.</p>
+            `;
+        },
+    })
+
+    // Enter full screen
+    timeline.push({
+        type: jsPsychFullscreen,
+        fullscreen_mode: true
+    })
+
     let images = [
         `./stimuli/ex1.jpg`,
         `./stimuli/ex2.jpg`,
@@ -72,21 +94,6 @@
         type: jsPsychPreload,
         auto_preload: true,
         images: images
-    })
-
-    // Browser check
-    timeline.push({
-        type: jsPsychBrowserCheck,
-        inclusion_function: (data) => {
-            return !data.mobile
-        },
-        exclusion_message: (data) => {
-            return `
-                <p>You must use a desktop/laptop computer to participate in this 
-                experiment.</p>
-                <p>Please restart the experiment on a desktop/laptop computer.</p>
-            `;
-        },
     })
 
     // Instructions
@@ -130,6 +137,15 @@
         choices: ['NO_KEYS'],
         post_trial_gap: 0
     }
+    // Build fixation
+    const fix = {
+        type: jsPsychImageKeyboardResponse,
+        stimulus: `./stimuli/fix.jpg`,
+        trial_duration: 500,
+        choices: ['NO_KEYS'],
+        post_trial_gap: 0
+    }
+
     for (let trial of trials) {
         if (trial.Trial == 4) { // Instruction
             timeline.push({
@@ -152,6 +168,9 @@
                 choices: ['Click to continue']
             })
         } else if (doAttentionCheck && trial.Trial == 41) { // Attention check
+            // Fixation
+            timeline.push(fix)
+
             // Target
             timeline.push({
                 type: jsPsychImageKeyboardResponse,
@@ -187,6 +206,9 @@
             })
         }
 
+        // Fixation
+        timeline.push(fix)
+
         // Target
         timeline.push({
             type: jsPsychImageKeyboardResponse,
@@ -214,7 +236,8 @@
             on_finish: function (data) {
                 data.Correct = data.CorrRes == data.response
                 data.AttentionFails = attentionFails
-            }
+            },
+            post_trial_gap: 0
         })
 
         // Feedback
@@ -233,6 +256,12 @@
             })
         }
     }
+
+    // Exit fullscreen
+    timeline.push({
+        type: jsPsychFullscreen,
+        fullscreen_mode: false
+    })
 
     // End card
     timeline.push({
