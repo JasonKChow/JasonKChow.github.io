@@ -4,3 +4,6 @@
 [submodule "ov_demo"]
 	path = ov_demo
 	url = git@github.com:OPLabVanderbilt/ov_demo.git
+[submodule "PSY2150-Skills-Workshop-1"]
+	path = PSY2150-Skills-Workshop-1
+	url = git@github.com:JasonKChow/PSY2150-Skills-Workshop-1.git
