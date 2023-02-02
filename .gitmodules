@@ -7,3 +7,6 @@
 [submodule "PSY2150-Skills-Workshop-1"]
 	path = PSY2150-Skills-Workshop-1
 	url = git@github.com:JasonKChow/PSY2150-Skills-Workshop-1.git
+[submodule "PSY2150-Skills-Workshop-2"]
+	path = PSY2150-Skills-Workshop-2
+	url = git@github.com:JasonKChow/PSY2150-Skills-Workshop-2.git
