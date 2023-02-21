@@ -10,3 +10,6 @@
 [submodule "PSY2150-Skills-Workshop-2"]
 	path = PSY2150-Skills-Workshop-2
 	url = git@github.com:JasonKChow/PSY2150-Skills-Workshop-2.git
+[submodule "WMjs"]
+	path = WMjs
+	url = git@github.com:OPLabVanderbilt/WMjs.git
