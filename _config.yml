@@ -67,10 +67,27 @@ content:
         description: | # this will include new lines to allow paragraphs
           Undergrad stuff
 
-  - title: Select Publications and Presentations
+  - title: Research Interests
     layout: text
     content: | # this will include new lines to allow paragraphs
-      Look at all my pubs!
+      # Individual differences in object recognition ability
+      **Chow, J. K.**, Palmeri, T. J., & Gauthier, I. (2022). Haptic object 
+      recognition based on shape relates to visual object recognition ability. 
+      *Psychological Research*, 86, 1262–1273 
+      https://doi.org/10.1007/s00426-021-01560-z
+
+      Individual differences in object recognition ability was originally
+      though of as a visual ability. I wondered whether this ability would 
+      extend to other modalities of perception. This required me to develop 
+      completely new tests of haptic object recognition ability. Using 
+      multivariate techniques like confirmatory factor analysis, we found that
+      haptic object recognition ability was related to visual object 
+      recognition.
+
+
+      ## Testing other things
+      Wow AI stuff
+
 
   - title: Side Projects
     layout: list # Type of content section (list/text)
@@ -108,8 +125,8 @@ content:
           Undergrad stuff   
 
 # Footer
-footer_show_references: true
-references_title: https://jasonc.how/pdfs/CV-JasonKChow.pdf
+footer_show_references: false
+# references_title: https://jasonc.how/pdfs/CV-JasonKChow.pdf
 
 # Build settings
 remote_theme: sproogen/resume-theme
