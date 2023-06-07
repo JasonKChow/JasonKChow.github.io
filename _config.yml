@@ -73,7 +73,9 @@ content:
       - layout: top-middle
         title: Individual differences in object recognition ability
         description: | # this will include new lines to allow paragraphs
-          <div style="text-align:center"><img src="https://cdn.discordapp.com/emojis/1091129552044052590.webp?size=96&quality=lossless" /></div>
+
+        
+          <div style="text-align:center"><img src="https://i.imgur.com/BfYTOZ7.png" /></div>
 
           In this line of research, I have developed completely new tests of 
           object recognition ability, applying psychometrics techniques to 
