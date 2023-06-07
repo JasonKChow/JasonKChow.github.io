@@ -70,20 +70,40 @@ content:
   - title: Research Interests
     layout: text
     content: | # this will include new lines to allow paragraphs
-      # Individual differences in object recognition ability
-      **Chow, J. K.**, Palmeri, T. J., & Gauthier, I. (2022). Haptic object 
+      ## Individual differences in object recognition ability
+      Despite how easy and automatic recognizing an object seems to be, it turns
+      out that people reliably differ in their ability to recognize objects. 
+      Visual object recognition ability could predict performance on a variety
+      of visual tests above and beyond higher-level factors like general 
+      intelligence and lower-level factors like visual acuity.
+
+      Object recognition ability was originally conceptualized as a visual 
+      ability but I wondered whether it extended to other modalities. 
+      Recogninzing objects is not strictly a visual task. We can recognize 
+      objects by touch or listening. Figuring out whether object recognition
+      ability extends across modalities or exist as related but distinct 
+      perceptual ability provides insights into how we perceive the world.
+
+      In this line of research, I have developed completely new tests of 
+      object recognition ability, applying psychometrics techniques to 
+      confidently measure this ability in haptic and auditory perception. Using
+      multivariate statistical techniques like confirmatory factor analysis, I 
+      found that visual and haptic object recognition share about 25% of their
+      variance. Interestingly, between visual and auditory object recognition 
+      ability, there was an almost perfect correlation across modalities. These
+      findings held true even when controlling for possible third factors like
+      general intelligence, working memory, and low-level visual ability. These
+      findings suggests that object recognition ability taps into common 
+      perceptual mechanisms that extends across modalities.  
+
+      **Representative Publications:**
+      * **Chow, J. K.**, Palmeri, T. J., & Gauthier, I. (2022). Haptic object 
       recognition based on shape relates to visual object recognition ability. 
       *Psychological Research*, 86, 1262–1273 
       https://doi.org/10.1007/s00426-021-01560-z
-
-      Individual differences in object recognition ability was originally
-      though of as a visual ability. I wondered whether this ability would 
-      extend to other modalities of perception. This required me to develop 
-      completely new tests of haptic object recognition ability. Using 
-      multivariate techniques like confirmatory factor analysis, we found that
-      haptic object recognition ability was related to visual object 
-      recognition.
-
+      * **Chow, J.K.**, Palmeri, T. J., Pluck, G., & Gauthier, I. (2023). 
+      Evidence for an amodal domaingeneral object recognition ability. 
+      *Manuscript under review*
 
       ## Testing other things
       Wow AI stuff
