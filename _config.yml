@@ -12,7 +12,7 @@ email: jason.k.chow@vanderbilt.edu
 website: https://jasonc.how
 
 # Dark Mode (true/false/never)
-darkmode: false
+darkmode: never
 
 # Social links
 # twitter_username: facespics
@@ -66,52 +66,6 @@ content:
         sub_title: BS Honors Psychology
         description: | # this will include new lines to allow paragraphs
           Undergrad stuff
-
-  - title: Research Interests
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      ## Individual differences in object recognition ability
-      In this line of research, I have developed completely new tests of 
-      object recognition ability, applying psychometrics techniques to 
-      confidently measure this ability in haptic and auditory perception. Using
-      multivariate statistical techniques like confirmatory factor analysis, I 
-      found that visual and haptic object recognition share about 25% of their
-      variance. Interestingly, between visual and auditory object recognition 
-      ability, there was an almost perfect correlation across modalities. The 
-      robust relationships remain even when controlling for possible third 
-      factors like general intelligence, working memory, and low-level visual 
-      ability. These findings suggests that object recognition ability taps into 
-      common perceptual mechanisms that extends across modalities.  
-
-      **Representative Publications:**
-      * **Chow, J. K.**, Palmeri, T. J., & Gauthier, I. (2022). Haptic object 
-      recognition based on shape relates to visual object recognition ability. 
-      *Psychological Research*, 86, 1262–1273 
-      https://doi.org/10.1007/s00426-021-01560-z
-      * **Chow, J.K.**, Palmeri, T. J., Pluck, G., & Gauthier, I. (2023). 
-      Evidence for an amodal domain general object recognition ability. 
-      *Manuscript under review*
-
-      ---
-      
-      ## Modeling Individual Differences in Perception with DNNs
-      We know that there are reliable individual differences in perceptual 
-      abilities but why they exist remains elusive. I am interested in using 
-      the latest deep neural networks to model individual differences and ask
-      what factors best account for these differences. As modeling individual
-      differences with deep neural networks is a relatively new approach, I have
-      worked to determine the best ways to measure differences between deep 
-      neural networks, directly comparing similarity metrics used in machine
-      learning, psychology, and neuroscience. In parallel, I have begun work on
-      determining which factors in deep neural networks are the best to 
-      manipulate when the goal is to model individual differences. To do this, I
-      sampled from a large space of deep neural networks to efficiently test 
-      which combination of factors result in the most consistent variations. 
-
-      **Representative Publications:**
-      * **Chow, J.** & Palmeri, T. (2022). Manipulating and Measuring Variation 
-      in DNN Representations. Poster presented at: *2022 Conference on Cognitive 
-      Computational Neuroscience*; Aug 2022; San Francisco, CA
 
   - title: Research Interests
     layout: list
