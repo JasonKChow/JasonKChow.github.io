@@ -75,7 +75,7 @@ content:
   - title: Side Projects
     layout: list # Type of content section (list/text)
     content:
-      - layout: top-middle
+      - layout: top
         title: Raided.pro
         caption: 2018 - 2023 [Expected]
         sub_title: PhD Psychology
@@ -92,13 +92,20 @@ content:
           Quote thingie
         description: | # this will include new lines to allow paragraphs
           Coadvised and stuff. 
-        
-  #     - layout: left
-  #       title: University of Toronto
-  #       caption: 2014 - 2018
-  #       sub_title: BS Honors Psychology
-  #       description: | # this will include new lines to allow paragraphs
-  #         Undergrad stuff   
+
+      - layout: top-middle
+        title: University of Toronto
+        caption: 2014 - 2018
+        sub_title: BS Honors Psychology
+        description: | # this will include new lines to allow paragraphs
+          Undergrad stuff   
+
+      - layout: top-right
+        title: University of Toronto
+        caption: 2014 - 2018
+        sub_title: BS Honors Psychology
+        description: | # this will include new lines to allow paragraphs
+          Undergrad stuff   
 
 # Footer
 footer_show_references: true
