@@ -56,7 +56,7 @@ content:
     content:
       - layout: left
         title: Vanderbilt University
-        caption: 2018 - 2023 [Expected]
+        caption: 2018 - Present
         sub_title: PhD Psychology
         description: | # this will include new lines to allow paragraphs
           Coadvised and stuff. 
@@ -109,7 +109,7 @@ content:
 
 # Footer
 footer_show_references: true
-# references_title: https://jasonc.how/pdfs/CV-JasonKChow.pdf
+references_title: [CV](https://jasonc.how/pdfs/CV-JasonKChow.pdf)
 
 # Build settings
 remote_theme: sproogen/resume-theme
