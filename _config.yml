@@ -103,7 +103,7 @@ content:
 
 # Footer
 footer_show_references: true
-references_title: [CV Link](https://andrexia.com)
+references_title: [CV Link](https://jasonc.how/pdfs/CV-JasonKChow.pdf)
 
 # Build settings
 remote_theme: sproogen/resume-theme
