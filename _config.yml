@@ -114,7 +114,7 @@ content:
       Computational Neuroscience*; Aug 2022; San Francisco, CA
 
   - title: Research Interests
-    layout: text
+    layout: list
     content: 
       - layout: top
         title: Individual differences in object recognition ability
