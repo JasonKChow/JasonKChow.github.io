@@ -31,7 +31,7 @@ github_username:  jasonkchow
 
 # Additional icon links
 additional_links:
-- title: itsgoingto.be
+- title: Google Scholar
   icon: fas fa-book
   url: https://scholar.google.com/citations?user=dxEzLKAAAAAJ&hl=en
 # - title: another link
@@ -74,7 +74,7 @@ content:
 
 # Footer
 footer_show_references: true
-# references_title: References on request (Override references text)
+references_title: [CV Link](https://andrexia.com)
 
 # Build settings
 remote_theme: sproogen/resume-theme
