@@ -6,10 +6,10 @@ favicon: images/favicon.ico
 version: 2
 
 # Personal info
-name: Brett Harris
-title: Senior Network System Administrator
-email: brett.h@email.co.uk
-website: www.github.com/jasonkchow
+name: Jason Chow
+title: Graduate Student
+email: jason.k.chow@vanderbilt.edu
+website: https://jasonc.how
 
 # Dark Mode (true/false/never)
 darkmode: false
@@ -32,8 +32,8 @@ orcid_username: 0000-0001-5439-471X
 # Additional icon links
 additional_links:
 - title: itsgoingto.be
-  icon: fas fa-globe
-  url: https://www.itsgoingto.be
+  icon: fa-solid fa-books
+  url: https://scholar.google.com/citations?user=dxEzLKAAAAAJ&hl=en
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
 #   url: Link url (eg. https://google.com)
