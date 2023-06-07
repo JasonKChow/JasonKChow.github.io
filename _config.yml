@@ -102,7 +102,7 @@ content:
 
 # Footer
 footer_show_references: true
-references_title: https://jasonc.how/pdfs/CV-JasonKChow.pdf
+# references_title: https://jasonc.how/pdfs/CV-JasonKChow.pdf
 
 # Build settings
 remote_theme: sproogen/resume-theme
