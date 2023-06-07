@@ -32,7 +32,7 @@ orcid_username: 0000-0001-5439-471X
 # Additional icon links
 additional_links:
 - title: itsgoingto.be
-  icon: fas fa-books
+  icon: fas fa-book
   url: https://scholar.google.com/citations?user=dxEzLKAAAAAJ&hl=en
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
@@ -60,6 +60,12 @@ content:
         sub_title: PhD Psychology
         description: | # this will include new lines to allow paragraphs
           Coadvised and stuff. 
+      - layout: left
+        title: University of Toronto
+        caption: 2014 - 2018
+        sub_title: BS Honors Psychology
+        description: | # this will include new lines to allow paragraphs
+          Undergrad stuff      
 
   - title: Select Publications and Presentations
     layout: text
