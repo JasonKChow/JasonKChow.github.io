@@ -72,6 +72,35 @@ content:
     content: | # this will include new lines to allow paragraphs
       Look at all my pubs!
 
+  - title: Side Projects
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: top-middle
+        title: Raided.pro
+        caption: 2018 - 2023 [Expected]
+        sub_title: PhD Psychology
+        link: https://github.com/Raided-pro
+        link_text: Github Organization Link
+        additional_links:
+          - title: Link 1
+            icon: fas fa-puzzle-piece
+            url: https://andrexia.com/
+          - title: Link 2
+            icon: fas fa-code
+            url: https://observablehq.com/@jasonkchow
+        quote: >
+          Quote thingie
+        description: | # this will include new lines to allow paragraphs
+          Coadvised and stuff. 
+        
+
+      - layout: left
+        title: University of Toronto
+        caption: 2014 - 2018
+        sub_title: BS Honors Psychology
+        description: | # this will include new lines to allow paragraphs
+          Undergrad stuff   
+
 # Footer
 footer_show_references: true
 references_title: [CV Link](https://andrexia.com)
