@@ -116,7 +116,7 @@ content:
   - title: Research Interests
     layout: list
     content: 
-      - layout: top
+      - layout: top-middle
         title: Individual differences in object recognition ability
         description: | # this will include new lines to allow paragraphs
           In this line of research, I have developed completely new tests of 
@@ -139,7 +139,7 @@ content:
           * **Chow, J.K.**, Palmeri, T. J., Pluck, G., & Gauthier, I. (2023). 
           Evidence for an amodal domain general object recognition ability. 
           *Manuscript under review*
-      - layout: top
+      - layout: top-middle
         title: Modeling Individual Differences in Perception with DNNs
         description: | # this will include new lines to allow paragraphs
           We know that there are reliable individual differences in perceptual 
