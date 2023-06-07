@@ -1,6 +1,6 @@
-# s6 stimulus
-# s6/Stimulus
-
-# Random junk
-.DS_Store
-.vscode
+*.gem
+.bundle
+.sass-cache
+_site
+Gemfile.lock
+*.code-workspace
