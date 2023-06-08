@@ -22,7 +22,7 @@ github_username:  jasonkchow
 # facebook_username: jekyll
 # flickr_username: jekyll
 # instagram_username: jameswgrant
-# linkedin_username: jameswgrant
+linkedin_username: jason-chow-66719827a
 # xing_username: jekyll
 # pinterest_username: jekyll
 # youtube_username: globalmtb
@@ -48,7 +48,7 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name is Jason Chow, I'm a PhD student in Psychology at Vanderbilt 
+  Hi, my name is Jason Chow, I'm a PhD student in Psychological Sciences at Vanderbilt 
   University deeply interested in the intersection between deep neural networks
   and individual differences in high-level perception. I want to use deep neural
   networks to study why human individual differences occur and take those 
@@ -80,9 +80,9 @@ content:
           In my behavioral work, I developed new haptic and auditory object 
           recognition tests and leveraged a variety of multivariate  statistics 
           and Bayesian statistics in Javascript and R. My dissertation focuses 
-          on my modeling work where, I studied how to best manipulate and 
-          measure deep neural networks to study individual differences in Python 
-          with Tensorflow. 
+          on my modeling work where I studied how to best manipulate and 
+          measure deep neural network models to study individual differences in 
+          Python with Tensorflow. 
 
       - layout: left
         title: University of Toronto
