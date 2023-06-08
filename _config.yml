@@ -67,6 +67,7 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
+        border: weak
         title: Vanderbilt University
         caption: 2018 - Present
         sub_title: PhD Psychological Sciences
@@ -102,6 +103,7 @@ content:
     layout: list
     content: 
       - layout: top-middle
+        border: weak
         title: Individual differences in object recognition ability
         description: | # this will include new lines to allow paragraphs
 
@@ -128,7 +130,6 @@ content:
           Evidence for an amodal domain general object recognition ability. 
           *Manuscript under review*
       - layout: top-middle
-        border: weak
         title: Modeling Individual Differences in Perception with DNNs
         description: | # this will include new lines to allow paragraphs
 
@@ -156,10 +157,11 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
+        border: weak
         title: RaidedGW2
         sub_title: Guild Wars 2 Data Tool
         link: https://observablehq.com/@jasonkchow/raidreport
-        link_text: Demo
+        link_text: Demo link
         additional_links:
           - title: Backend Repo
             icon: fas fa-code
@@ -187,7 +189,7 @@ content:
         title: RaidedCrow
         sub_title: Crowfall Log Parser
         link: https://observablehq.com/d/df02f3f553b6b0c6
-        link_text: Demo
+        link_text: Demo link
         description: | # this will include new lines to allow paragraphs
           The short-lived game Crowfall could produce combat logs but they were
           poorly formatted and there lacked a convenient way to parse and 
