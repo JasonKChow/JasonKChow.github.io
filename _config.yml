@@ -59,18 +59,17 @@ content:
         caption: 2018 - Present
         sub_title: PhD Psychology
         description: | # this will include new lines to allow paragraphs
-          Directly from my undergraduate degree, I came to Vanderbilt University
-          to work with Dr. Thomas Palmeri and Dr. Isabel Gauthier. Being 
-          coadvised let me have deep experience in both computational modeling
-          and psychometrics. I developed two lines of research studying 
-          individual differences in high-level perception, namely object 
-          recognition. For psychometrics, I developed new haptic and auditory 
-          object recognition tests and leveraged a variety of multivariate 
-          statistics and Bayesian statistics in Javascript and R. For 
-          computational modeling, I studied how to best manipulate and measure
-          deep neural networks to study individual differences in Python with
-          Tensorflow. My dissertation work focuses on my modeling work but it is
-          largely informed by the findings related to my psychometrics work.  
+          I came to Vanderbilt University to work with Dr. Thomas Palmeri and 
+          Dr. Isabel Gauthier. Being coadvised let me develop two lines of 
+          research studying individual differences in high-level perception, 
+          namely object recognition. 
+          
+          In my behavioral work, I developed new haptic and auditory object 
+          recognition tests and leveraged a variety of multivariate  statistics 
+          and Bayesian statistics in Javascript and R. My dissertation focuses 
+          on my modeling work where, I studied how to best manipulate and 
+          measure deep neural networks to study individual differences in Python 
+          with Tensorflow. 
 
       - layout: left
         title: University of Toronto
@@ -80,14 +79,12 @@ content:
           From my tiny hometown in rural Alberta, I went to the University of
           Toronto where my first lecture had more people than my entire town. 
           As a first-generation student with first-generation parents, I had no
-          idea what I wanted to do. I discovered Psychology and was fascinated 
-          by perception and cognitive psychology. Early on, I was fortunate 
-          enough to get involved in research with Dr. Michael Mack and Dr. Lynn
-          Hasher where I cut my teeth on my own projects. Here, I built a wide
-          range of technical skills in programming, statistics, and 3D printing
-          to apply to my research. I was excited to discover the possibilities 
-          of computational modeling that led me to my current research 
-          interests.  
+          idea what I wanted to do. 
+          
+          Early on, I was fortunate enough to get involved in research with Dr. 
+          Michael Mack and Dr. Lynn Hasher where I cut my teeth on my own 
+          projects. I built a wide range of technical skills in 
+          programming, statistics, and 3D printing to apply to my research. 
 
   - title: Research Interests
     layout: list
