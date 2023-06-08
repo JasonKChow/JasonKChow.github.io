@@ -59,13 +59,35 @@ content:
         caption: 2018 - Present
         sub_title: PhD Psychology
         description: | # this will include new lines to allow paragraphs
-          Coadvised and stuff. 
+          Directly from my undergraduate degree, I came to Vanderbilt University
+          to work with Dr. Thomas Palmeri and Dr. Isabel Gauthier. Being 
+          coadvised let me have deep experience in both computational modeling
+          and psychometrics. I developed two lines of research studying 
+          individual differences in high-level perception, namely object 
+          recognition. For psychometrics, I developed new haptic and auditory 
+          object recognition tests and leveraged a variety of multivariate 
+          statistics and Bayesian statistics in Javascript and R. For 
+          computational modeling, I studied how to best manipulate and measure
+          deep neural networks to study individual differences in Python with
+          Tensorflow. My dissertation work focuses on my modeling work but it is
+          largely informed by the findings related to my psychometrics work.  
+
       - layout: left
         title: University of Toronto
         caption: 2014 - 2018
         sub_title: BS Honors Psychology
         description: | # this will include new lines to allow paragraphs
-          Undergrad stuff
+          From my tiny hometown in rural Alberta, I went to the University of
+          Toronto where my first lecture had more people than my entire town. 
+          As a first-generation student with first-generation parents, I had no
+          idea what I wanted to do. I discovered Psychology and was fascinated 
+          by perception and cognitive psychology. Early on, I was fortunate 
+          enough to get involved in research with Dr. Michael Mack and Dr. Lynn
+          Hasher where I cut my teeth on my own projects. Here, I built a wide
+          range of technical skills in programming, statistics, and 3D printing
+          to apply to my research. I was excited to discover the possibilities 
+          of computational modeling that led me to my current research 
+          interests.  
 
   - title: Research Interests
     layout: list
@@ -75,7 +97,7 @@ content:
         description: | # this will include new lines to allow paragraphs
 
 
-          <div style="text-align:center"><img src="https://i.imgur.com/BfYTOZ7.png" /></div>
+          <div style="text-align:center"><img src="https://i.imgur.com/BfYTOZ7.png"/></div>
 
           In this line of research, I have developed completely new tests of 
           object recognition ability, applying psychometrics techniques to 
@@ -98,11 +120,12 @@ content:
           Evidence for an amodal domain general object recognition ability. 
           *Manuscript under review*
       - layout: top-middle
+        border: weak
         title: Modeling Individual Differences in Perception with DNNs
         description: | # this will include new lines to allow paragraphs
 
 
-          <div style="text-align:center"><img src="https://i.imgur.com/zdo3ZGz.png" /></div>
+          <div style="text-align:center"><img src="https://i.imgur.com/zdo3ZGz.png"/></div>
 
           We know that there are reliable individual differences in perceptual 
           abilities but why they exist remains elusive. I am interested in using 
