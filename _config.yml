@@ -48,7 +48,17 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, I study individual differences.
+  Hi, my name is Jason Chow, I'm a PhD student in Psychology at Vanderbilt 
+  University deeply interested in the intersection between deep neural networks
+  and individual differences in high-level perception. I want to use deep neural
+  networks to study why human individual differences occur and take those 
+  insights to build better models of human perception. 
+
+  I enjoy expanding my technical toolkit to solve new and exciting problems. I 
+  believe that having the right tool at hand is half the battle. Over the years,
+  I have developed a wide range of skills in multivariate statistics, Bayesian
+  analysis, deep learning, online data collection, and simulation techniques 
+  implemented in R, Python, and Javascript.  
 
 content:
   - title: Education # Title for the section
@@ -57,7 +67,7 @@ content:
       - layout: left
         title: Vanderbilt University
         caption: 2018 - Present
-        sub_title: PhD Psychology
+        sub_title: PhD Psychological Sciences
         description: | # this will include new lines to allow paragraphs
           I came to Vanderbilt University to work with Dr. Thomas Palmeri and 
           Dr. Isabel Gauthier. Being coadvised let me develop two lines of 
@@ -83,7 +93,7 @@ content:
           
           Early on, I was fortunate enough to get involved in research with Dr. 
           Michael Mack and Dr. Lynn Hasher where I cut my teeth on my own 
-          projects. I built a wide range of technical skills in 
+          projects in Psychology. I built a wide range of technical skills in 
           programming, statistics, and 3D printing to apply to my research. 
 
   - title: Research Interests
@@ -92,7 +102,6 @@ content:
       - layout: top-middle
         title: Individual differences in object recognition ability
         description: | # this will include new lines to allow paragraphs
-
 
           <div style="text-align:center"><img src="https://i.imgur.com/BfYTOZ7.png"/></div>
 
@@ -120,7 +129,6 @@ content:
         border: weak
         title: Modeling Individual Differences in Perception with DNNs
         description: | # this will include new lines to allow paragraphs
-
 
           <div style="text-align:center"><img src="https://i.imgur.com/zdo3ZGz.png"/></div>
 
