@@ -9,7 +9,7 @@ version: 2
 name: Jason Chow
 title: Computational Cognitive Psychologist
 email: jason.k.chow@vanderbilt.edu
-website: https://jasonc.how
+# website: https://jasonc.how
 
 # Dark Mode (true/false/never)
 darkmode: never
@@ -59,6 +59,8 @@ about_content: | # this will include new lines to allow paragraphs
   I have developed a wide range of skills in multivariate statistics, Bayesian
   analysis, deep learning, online data collection, and simulation techniques 
   implemented in R, Python, and Javascript.  
+
+  See my [CV](https://jasonc.how/pdfs/CV-JasonKChow.pdf) for more details!
 
 content:
   - title: Education # Title for the section
@@ -150,7 +152,7 @@ content:
           in DNN Representations. Poster presented at: *2022 Conference on Cognitive 
           Computational Neuroscience*; Aug 2022; San Francisco, CA
 
-  - title: Side Projects
+  - title: Personal Projects
     layout: list # Type of content section (list/text)
     content:
       - layout: top
