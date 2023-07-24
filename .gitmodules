@@ -13,3 +13,6 @@
 [submodule "WMjs"]
 	path = WMjs
 	url = git@github.com:OPLabVanderbilt/WMjs.git
+[submodule "oa_demo"]
+	path = oa_demo
+	url = git@github.com:OPLabVanderbilt/oa_demo.git
