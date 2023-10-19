@@ -9,6 +9,7 @@
     <script src="./jspsych/plugin-html-button-response.js"></script>
     <script src="./jspsych/plugin-html-keyboard-response.js"></script>
     <script src="./jspsych/plugin-image-keyboard-response.js"></script>
+    <script src="./jspsych/plugin-browser-check.js"></script>
     <script src="./trials.js"></script>
     <style>
         p {font-size: 30px}
@@ -19,6 +20,7 @@
 <body></body>
 <script>
     const ITI = 750
+    const imgWidth = window.innerWidth/3 < 290 ? Math.round(window.innerWidth/.3) : 290
 
     let jsPsych = initJsPsych({
         default_iti: ITI
@@ -81,18 +83,16 @@
 
     // Build mask slide
     const mask = {
-        type: jsPsychImageKeyboardResponse,
-        stimulus: `./stimuli/mask.jpg`,
-        stimulus_width: 300,
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: `<img src="./stimuli/mask.jpg" style="width:${imgWidth}px">`,
         trial_duration: 500,
         choices: ['NO_KEYS'],
         post_trial_gap: 0
     }
     // Build fixation
     const fix = {
-        type: jsPsychImageKeyboardResponse,
-        stimulus: `./stimuli/fix.jpg`,
-        stimulus_width: 300,
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: `<img src="./stimuli/fix.jpg" style="width:${imgWidth}px">`,
         trial_duration: 500,
         choices: ['NO_KEYS'],
         post_trial_gap: 0
@@ -126,12 +126,11 @@
 
         // Target
         timeline.push({
-            type: jsPsychImageKeyboardResponse,
-            stimulus: `./stimuli/trial${trial.Trial}-target.jpg`,
-            stimulus_width: 300,
+            type: jsPsychHtmlKeyboardResponse,
+            stimulus: `<img src="./stimuli/trial${trial.Trial}-target.jpg" style="width:${imgWidth}px">`,
             trial_duration: trial.Duration,
             choices: ['NO_KEYS'],
-            post_trial_gap: 0
+            post_trial_gap: 0,
         })
 
         // Mask
@@ -142,7 +141,7 @@
             type: jsPsychHtmlButtonResponse,
             stimulus: '',
             choices: [1, 2, 3].map(x => `trial${trial.Trial}-${x}.jpg`),
-            button_html: '<input type="image" src="./stimuli/%choice%" style="width:300px"/>',
+            button_html: `<input type="image" src="./stimuli/%choice%" style="width:${imgWidth}px"/>`,
             data: {
                 TrialN: trial.Trial,
                 CorrRes: trial.CorrRes - 1,
@@ -166,7 +165,7 @@
                     }
                 },
                 choices: ['NO_KEYS'],
-                trial_duration: 1000
+                trial_duration: 1000000000
             })
         }
     }
