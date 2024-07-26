@@ -7,8 +7,8 @@ version: 2
 
 # Personal info
 name: Jason Chow
-title: Computational Cognitive Psychologist
-email: jason.k.chow@vanderbilt.edu
+title: Computational Cognitive Scientist
+email: me@jasonc.how
 # website: https://jasonc.how
 
 # Dark Mode (true/false/never)
@@ -48,19 +48,22 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, my name is Jason Chow, I'm a PhD student in Psychological Sciences at Vanderbilt 
-  University deeply interested in the intersection between deep neural networks
-  and individual differences in high-level perception. I want to use deep neural
-  networks to study why human individual differences occur and take those 
-  insights to build better models of human perception. 
+  I am a Computational Cognitive Scientist specializing in leveraging machine 
+  learning and AI to understand human perception and decision-making. I develop 
+  machine learning models inspired by principles in cognitive psychology to 
+  extract unique insights from high-dimensional data. My skillset enables me to 
+  distill complex human data into actionable takeaways, providing a unique 
+  window into data.
 
-  I enjoy expanding my technical toolkit to solve new and exciting problems. I 
-  believe that having the right tool at hand is half the battle. Over the years,
-  I have developed a wide range of skills in multivariate statistics, Bayesian
-  analysis, deep learning, online data collection, and simulation techniques 
-  implemented in R, Python, and Javascript.  
+I am proficient in Python, R, and JavaScript. I have extensive experience with 
+libraries and technologies for machine learning such as Tensorflow, PyTorch, 
+and Scikit-learn. My expertise also includes data visualization with D3.js, 
+statistical analysis with Tidyverse, lavaan, BayesFactor. In my side-projects, 
+I've flexed my wider technical skills in creating end-to-end consumer-facing 
+projects creating an ETL pipeline, efficient data APIs, and interactive data 
+visualization dashboards, serving 20K+ users.
 
-  See my **[CV](https://jasonc.how/pdfs/CV-JasonKChow.pdf)** for more details!
+  See my **[resume](https://jasonc.how/pdfs/resumeEng-JasonKChow.pdf)** for more details!
 
 content:
   - title: Education # Title for the section
@@ -69,35 +72,14 @@ content:
       - layout: left
         border: weak
         title: Vanderbilt University
-        caption: 2018 - Present
+        caption: 2018 - 2024
         sub_title: PhD Psychological Sciences
         description: | # this will include new lines to allow paragraphs
-          I came to Vanderbilt University to work with Dr. Thomas Palmeri and 
-          Dr. Isabel Gauthier. Being coadvised let me develop two lines of 
-          research studying individual differences in high-level perception, 
-          namely object recognition. 
-          
-          In my behavioral work, I developed new haptic and auditory object 
-          recognition tests and leveraged a variety of multivariate  statistics 
-          and Bayesian statistics in Javascript and R. My dissertation focuses 
-          on my modeling work where I studied how to best manipulate and 
-          measure deep neural network models to study individual differences in 
-          Python with Tensorflow. 
-
-      - layout: left
-        title: University of Toronto
-        caption: 2014 - 2018
-        sub_title: BS Honors Psychology
-        description: | # this will include new lines to allow paragraphs
-          From my tiny hometown in rural Alberta, I went to the University of
-          Toronto where my first lecture had more people than my entire town. 
-          As a first-generation student with first-generation parents, I had no
-          idea what I wanted to do. 
-          
-          Early on, I was fortunate enough to get involved in research with Dr. 
-          Michael Mack and Dr. Lynn Hasher where I cut my teeth on my own 
-          projects in Psychology. I built a wide range of technical skills in 
-          programming, statistics, and 3D printing to apply to my research. 
+          * Developed scalable framework to reliably measure representational variability across deep neural networks due to differences in model attributes (e.g., model architecture, training dataset, and training regime) across 700+ models and 9 datasets.
+          * Distilled insights from high-dimensional large-scale analysis (e.g., INDSCAL, hierarchical clustering) of deep neural network models to efficiently instantiate parametric model manipulations across a set of 100 new networks to systematically vary representations to model individual differences in object recognition ability.
+          * Implemented psychologically-inspired transfer learning DNN architecture improving a multi-task classification accuracy by 3%
+          * Designed, optimized, and validated new measures of object recognition ability in vision, haptics, and audition using hand-designed trials and data-driven automated techniques resulting in high reliability with faster tests (25% reduction in test time).
+          * Created internal R package to perform statistical analysis/visualization of multivariate individual differences data using confirmatory factor analysis and Bayesian hypothesis testing, resulting in 7 first-author publications.
 
   - title: Research Interests
     layout: list
