@@ -55,13 +55,13 @@ about_content: | # this will include new lines to allow paragraphs
   distill complex human data into actionable takeaways, providing a unique 
   window into data.
 
-I am proficient in Python, R, and JavaScript. I have extensive experience with 
-libraries and technologies for machine learning such as Tensorflow, PyTorch, 
-and Scikit-learn. My expertise also includes data visualization with D3.js, 
-statistical analysis with Tidyverse, lavaan, BayesFactor. In my side-projects, 
-I've flexed my wider technical skills in creating end-to-end consumer-facing 
-projects creating an ETL pipeline, efficient data APIs, and interactive data 
-visualization dashboards, serving 20K+ users.
+  I am proficient in Python, R, and JavaScript. I have extensive experience with 
+  libraries and technologies for machine learning such as Tensorflow, PyTorch, 
+  and Scikit-learn. My expertise also includes data visualization with D3.js, 
+  statistical analysis with Tidyverse, lavaan, BayesFactor. In my side-projects, 
+  I've flexed my wider technical skills in creating end-to-end consumer-facing 
+  projects creating an ETL pipeline, efficient data APIs, and interactive data 
+  visualization dashboards, serving 20K+ users.
 
   See my **[resume](https://jasonc.how/pdfs/resumeEng-JasonKChow.pdf)** for more details!
 
@@ -86,32 +86,19 @@ content:
     content:
       - layout: left
         border: weak
-        title: RaidedGW2
-        sub_title: Guild Wars 2 Data Tool
-        link: https://observablehq.com/@jasonkchow/raidreport
+        title: RaidedLoA
+        sub_title: Lost Ark aggregate data analysis website
+        link: https://raided.pro/loa-logs
         link_text: Demo link
         additional_links:
-          - title: Backend Repo
+          - title: Data scraping CLI
             icon: fas fa-code
-            url: https://github.com/Raided-pro/RaidedGW2
-          - title: Discord Bot Repo
+            url: https://github.com/evilandrex/raided-loa-scraper
+          - title: Frontend Repo
             icon: fab fa-discord
-            url: https://github.com/Raided-pro/RaidedBot
+            url: https://github.com/evilandrex/raided-loa
         description: | # this will include new lines to allow paragraphs
-          The game Guild Wars 2 has rich combat logs that can be parsed on a 
-          per fight basis. These logs include information on teams of players
-          and their performance in individual fights. I built a Discord bot 
-          using Python to connect to my backend server that collects and parses
-          logs to store data in a MySQL database. The backend server also acts 
-          as an API for my frontend web app built with D3.js in Observable 
-          Notebooks to provide an interactive way to explore the data. 
-
-          While log parsers are common in the Guild Wars 2 community, it lacks
-          a central repository to track performance week over week and compare
-          people's performance in the same fights. This project aimed to fill
-          this gap at a small scale for my friends. I focused on providing an
-          clean and intuitive interface both from the Discord bot and the online
-          web app that is easy to understand while still having a lot of options.
+          Lost ark description.
 
       - layout: left
         border: weak
@@ -143,7 +130,7 @@ content:
           web app that is easy to understand while still having a lot of options.
 
       - layout: left
-        title: RaidedCrow
+        title: RaidedCF
         sub_title: Crowfall Log Parser
         link: https://observablehq.com/d/df02f3f553b6b0c6
         link_text: Demo link
