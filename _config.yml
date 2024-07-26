@@ -70,7 +70,6 @@ content:
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        border: weak
         title: Vanderbilt University
         caption: 2018 - 2024
         sub_title: PhD Psychological Sciences
@@ -87,8 +86,8 @@ content:
       - layout: left
         border: weak
         title: RaidedLoA
-        sub_title: Lost Ark aggregate data analysis website
-        link: https://raided.pro/loa-logs
+        sub_title: Lost Ark data analysis website
+        link: https://raided.pro/loa-logs?boss=Veskal
         link_text: Demo link
         additional_links:
           - title: Data scraping CLI
@@ -98,7 +97,14 @@ content:
             icon: fab fa-discord
             url: https://github.com/evilandrex/raided-loa
         description: | # this will include new lines to allow paragraphs
-          Lost ark description.
+          Website to analyze global trends in performance across classes in the 
+          game. Developed data scraping Python CLI for use with Github Actions. 
+          Displayed data in interactive dashboard built with D3.js and 
+          Observable Framework. Used user feedback and analytics to shape 
+          refinement of the user experience and development of new features. 
+          Focused on a strong global user experience while efficiently using 
+          available resources to collect, process, and serve data. Visited by 
+          22K+ users.
 
       - layout: left
         border: weak
@@ -114,20 +120,12 @@ content:
             icon: fab fa-discord
             url: https://github.com/Raided-pro/RaidedBot
         description: | # this will include new lines to allow paragraphs
-          The game Guild Wars 2 has rich combat logs that can be parsed on a 
-          per fight basis. These logs include information on teams of players
-          and their performance in individual fights. I built a Discord bot 
-          using Python to connect to my backend server that collects and parses
-          logs to store data in a MySQL database. The backend server also acts 
-          as an API for my frontend web app built with D3.js in Observable 
-          Notebooks to provide an interactive way to explore the data. 
-
-          While log parsers are common in the Guild Wars 2 community, it lacks
-          a central repository to track performance week over week and compare
-          people's performance in the same fights. This project aimed to fill
-          this gap at a small scale for my friends. I focused on providing an
-          clean and intuitive interface both from the Discord bot and the online
-          web app that is easy to understand while still having a lot of options.
+          Set of tools to collect, analyze, and display historical team data. 
+          Created Discord bot for ETL into a MySQL database. Created web API 
+          with Flask to serve data for an interactive dashboard. Added novel 
+          statistical methods to avoid misleading conclusions and improve ease 
+          of understanding. Focused on a closely tailored experience to best 
+          serve the teams using the tools.
 
       - layout: left
         title: RaidedCF
@@ -135,17 +133,12 @@ content:
         link: https://observablehq.com/d/df02f3f553b6b0c6
         link_text: Demo link
         description: | # this will include new lines to allow paragraphs
-          The short-lived game Crowfall could produce combat logs but they were
-          poorly formatted and there lacked a convenient way to parse and 
-          organize the information. Further, the community had a culture of 
-          keeping their strategies a secret so privacy was a concern. I built 
-          this tool with D3.js in Observable Notebooks to parse and organize 
-          this data completely locally in the browser. 
-
-          With this project, I focused on making the tool to display as much
-          information as possible while still being useful even at a glance. I 
-          wanted users to be able to quickly glean summary information and then
-          be able to dig into the exact breakdowns of the data.
+          A tool to parse and organize combat logs from poorly structured data.
+          Focused on easy on providing high-level information at a glance while
+          providing high information density through interactive breakdowns. 
+          Built entirely with Javascript and D3.js, requiring no server-side 
+          processing. Focused on efficiency and privacy to proide trust to the
+          user that their data stays on their machine.
 
   - title: Research Interests
     layout: list
@@ -196,9 +189,9 @@ content:
           which combination of factors result in the most consistent variations. 
 
           **Representative Publications:**
-          * **Chow, J.** & Palmeri, T. (2022). Manipulating and Measuring Variation 
-          in DNN Representations. Poster presented at: *2022 Conference on Cognitive 
-          Computational Neuroscience*; Aug 2022; San Francisco, CA
+          * **Chow, J.** & Palmeri, T. (2024). Manipulating and Measuring 
+          Variation in Deep Neural Network (DNN) Representations of Objects. 
+          *Cognition*. https://osf.io/preprints/psyarxiv/yw49e
 
 
 # Footer
