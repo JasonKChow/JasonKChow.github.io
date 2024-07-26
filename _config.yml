@@ -81,6 +81,85 @@ content:
           * Designed, optimized, and validated new measures of object recognition ability in vision, haptics, and audition using hand-designed trials and data-driven automated techniques resulting in high reliability with faster tests (25% reduction in test time).
           * Created internal R package to perform statistical analysis/visualization of multivariate individual differences data using confirmatory factor analysis and Bayesian hypothesis testing, resulting in 7 first-author publications.
 
+  - title: Portfolio
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: left
+        border: weak
+        title: RaidedGW2
+        sub_title: Guild Wars 2 Data Tool
+        link: https://observablehq.com/@jasonkchow/raidreport
+        link_text: Demo link
+        additional_links:
+          - title: Backend Repo
+            icon: fas fa-code
+            url: https://github.com/Raided-pro/RaidedGW2
+          - title: Discord Bot Repo
+            icon: fab fa-discord
+            url: https://github.com/Raided-pro/RaidedBot
+        description: | # this will include new lines to allow paragraphs
+          The game Guild Wars 2 has rich combat logs that can be parsed on a 
+          per fight basis. These logs include information on teams of players
+          and their performance in individual fights. I built a Discord bot 
+          using Python to connect to my backend server that collects and parses
+          logs to store data in a MySQL database. The backend server also acts 
+          as an API for my frontend web app built with D3.js in Observable 
+          Notebooks to provide an interactive way to explore the data. 
+
+          While log parsers are common in the Guild Wars 2 community, it lacks
+          a central repository to track performance week over week and compare
+          people's performance in the same fights. This project aimed to fill
+          this gap at a small scale for my friends. I focused on providing an
+          clean and intuitive interface both from the Discord bot and the online
+          web app that is easy to understand while still having a lot of options.
+
+      - layout: left
+        border: weak
+        title: RaidedGW2
+        sub_title: Guild Wars 2 Data Tool
+        link: https://observablehq.com/@jasonkchow/raidreport
+        link_text: Demo link
+        additional_links:
+          - title: Backend Repo
+            icon: fas fa-code
+            url: https://github.com/Raided-pro/RaidedGW2
+          - title: Discord Bot Repo
+            icon: fab fa-discord
+            url: https://github.com/Raided-pro/RaidedBot
+        description: | # this will include new lines to allow paragraphs
+          The game Guild Wars 2 has rich combat logs that can be parsed on a 
+          per fight basis. These logs include information on teams of players
+          and their performance in individual fights. I built a Discord bot 
+          using Python to connect to my backend server that collects and parses
+          logs to store data in a MySQL database. The backend server also acts 
+          as an API for my frontend web app built with D3.js in Observable 
+          Notebooks to provide an interactive way to explore the data. 
+
+          While log parsers are common in the Guild Wars 2 community, it lacks
+          a central repository to track performance week over week and compare
+          people's performance in the same fights. This project aimed to fill
+          this gap at a small scale for my friends. I focused on providing an
+          clean and intuitive interface both from the Discord bot and the online
+          web app that is easy to understand while still having a lot of options.
+
+      - layout: left
+        title: RaidedCrow
+        sub_title: Crowfall Log Parser
+        link: https://observablehq.com/d/df02f3f553b6b0c6
+        link_text: Demo link
+        description: | # this will include new lines to allow paragraphs
+          The short-lived game Crowfall could produce combat logs but they were
+          poorly formatted and there lacked a convenient way to parse and 
+          organize the information. Further, the community had a culture of 
+          keeping their strategies a secret so privacy was a concern. I built 
+          this tool with D3.js in Observable Notebooks to parse and organize 
+          this data completely locally in the browser. 
+
+          With this project, I focused on making the tool to display as much
+          information as possible while still being useful even at a glance. I 
+          wanted users to be able to quickly glean summary information and then
+          be able to dig into the exact breakdowns of the data.
+
   - title: Research Interests
     layout: list
     content: 
@@ -134,55 +213,6 @@ content:
           in DNN Representations. Poster presented at: *2022 Conference on Cognitive 
           Computational Neuroscience*; Aug 2022; San Francisco, CA
 
-  - title: Personal Projects
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: left
-        border: weak
-        title: RaidedGW2
-        sub_title: Guild Wars 2 Data Tool
-        link: https://observablehq.com/@jasonkchow/raidreport
-        link_text: Demo link
-        additional_links:
-          - title: Backend Repo
-            icon: fas fa-code
-            url: https://github.com/Raided-pro/RaidedGW2
-          - title: Discord Bot Repo
-            icon: fab fa-discord
-            url: https://github.com/Raided-pro/RaidedBot
-        description: | # this will include new lines to allow paragraphs
-          The game Guild Wars 2 has rich combat logs that can be parsed on a 
-          per fight basis. These logs include information on teams of players
-          and their performance in individual fights. I built a Discord bot 
-          using Python to connect to my backend server that collects and parses
-          logs to store data in a MySQL database. The backend server also acts 
-          as an API for my frontend web app built with D3.js in Observable 
-          Notebooks to provide an interactive way to explore the data. 
-
-          While log parsers are common in the Guild Wars 2 community, it lacks
-          a central repository to track performance week over week and compare
-          people's performance in the same fights. This project aimed to fill
-          this gap at a small scale for my friends. I focused on providing an
-          clean and intuitive interface both from the Discord bot and the online
-          web app that is easy to understand while still having a lot of options.
-
-      - layout: left
-        title: RaidedCrow
-        sub_title: Crowfall Log Parser
-        link: https://observablehq.com/d/df02f3f553b6b0c6
-        link_text: Demo link
-        description: | # this will include new lines to allow paragraphs
-          The short-lived game Crowfall could produce combat logs but they were
-          poorly formatted and there lacked a convenient way to parse and 
-          organize the information. Further, the community had a culture of 
-          keeping their strategies a secret so privacy was a concern. I built 
-          this tool with D3.js in Observable Notebooks to parse and organize 
-          this data completely locally in the browser. 
-
-          With this project, I focused on making the tool to display as much
-          information as possible while still being useful even at a glance. I 
-          wanted users to be able to quickly glean summary information and then
-          be able to dig into the exact breakdowns of the data.
 
 # Footer
 footer_show_references: false
