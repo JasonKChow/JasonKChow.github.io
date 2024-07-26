@@ -16,7 +16,7 @@ darkmode: never
 
 # Social links
 # twitter_username: facespics
-github_username:  jasonkchow
+github_username: jasonkchow
 # stackoverflow_username: "00000001"
 # dribbble_username: jekyll
 # facebook_username: jekyll
@@ -31,9 +31,9 @@ linkedin_username: jason-chow-66719827a
 
 # Additional icon links
 additional_links:
-- title: Google Scholar
-  icon: fas fa-book
-  url: https://scholar.google.com/citations?user=dxEzLKAAAAAJ&hl=en
+  - title: Google Scholar
+    icon: fas fa-book
+    url: https://scholar.google.com/citations?user=dxEzLKAAAAAJ&hl=en
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
 #   url: Link url (eg. https://google.com)
@@ -57,11 +57,12 @@ about_content: | # this will include new lines to allow paragraphs
 
   I am proficient in Python, R, and JavaScript. I have extensive experience with 
   libraries and technologies for machine learning such as Tensorflow, PyTorch, 
-  and Scikit-learn. My expertise also includes data visualization with D3.js, 
+  and Scikit-learn. My expertise also includes data visualization with D3.js and 
   statistical analysis with Tidyverse, lavaan, BayesFactor. In my side-projects, 
   I've flexed my wider technical skills in creating end-to-end consumer-facing 
-  projects creating an ETL pipeline, efficient data APIs, and interactive data 
-  visualization dashboards, serving 20K+ users.
+  products: implementing ETL pipelines, efficient data APIs, and interactive data 
+  visualization dashboards, handling data with millions of rows. Across these 
+  projects, I've served 25K+ users.
 
   See my **[resume](https://jasonc.how/pdfs/resumeEng-JasonKChow.pdf)** for more details!
 
@@ -142,11 +143,12 @@ content:
 
   - title: Research Interests
     layout: list
-    content: 
+    content:
       - layout: top-middle
         border: weak
         title: Individual differences in object recognition ability
         description: | # this will include new lines to allow paragraphs
+
 
           <div style="text-align:center"><img src="https://i.imgur.com/BfYTOZ7.png"/></div>
 
@@ -173,6 +175,7 @@ content:
         title: Modeling Individual Differences in Perception with DNNs
         description: | # this will include new lines to allow paragraphs
 
+
           <div style="text-align:center"><img src="https://i.imgur.com/zdo3ZGz.png"/></div>
 
           We know that there are reliable individual differences in perceptual 
@@ -193,7 +196,6 @@ content:
           Variation in Deep Neural Network (DNN) Representations of Objects. 
           *Cognition*. https://osf.io/preprints/psyarxiv/yw49e
 
-
 # Footer
 footer_show_references: false
 # references_title: https://jasonc.how/pdfs/CV-JasonKChow.pdf
@@ -206,4 +208,4 @@ sass:
   style: compressed
 
 plugins:
- - jekyll-seo-tag
+  - jekyll-seo-tag
