@@ -118,7 +118,7 @@ content:
             icon: fas fa-code
             url: https://github.com/Raided-pro/RaidedGW2
           - title: Discord Bot Repo
-            icon: fab fa-discord
+            icon: fas fa-code
             url: https://github.com/Raided-pro/RaidedBot
         description: | # this will include new lines to allow paragraphs
           Set of tools to collect, analyze, and display historical team data. 
@@ -150,6 +150,8 @@ content:
         description: | # this will include new lines to allow paragraphs
 
 
+
+
           <div style="text-align:center"><img src="https://i.imgur.com/BfYTOZ7.png"/></div>
 
           In this line of research, I have developed completely new tests of 
@@ -174,6 +176,8 @@ content:
       - layout: top-middle
         title: Modeling Individual Differences in Perception with DNNs
         description: | # this will include new lines to allow paragraphs
+
+
 
 
           <div style="text-align:center"><img src="https://i.imgur.com/zdo3ZGz.png"/></div>
