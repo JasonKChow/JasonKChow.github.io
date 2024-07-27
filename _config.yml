@@ -48,7 +48,7 @@ additional_links:
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
-  I am a Computational Cognitive Scientist specializing in leveraging machine 
+  I am a computational cognitive scientist specializing in leveraging machine 
   learning and AI to understand human perception and decision-making. I develop 
   machine learning models inspired by principles in cognitive psychology to 
   extract unique insights from high-dimensional data. My skillset enables me to 
@@ -110,7 +110,7 @@ content:
       - layout: left
         border: weak
         title: RaidedGW2
-        sub_title: Guild Wars 2 Data Tool
+        sub_title: Guild Wars 2 data toolset
         link: https://observablehq.com/@jasonkchow/raidreport
         link_text: Demo link
         additional_links:
@@ -130,7 +130,7 @@ content:
 
       - layout: left
         title: RaidedCF
-        sub_title: Crowfall Log Parser
+        sub_title: Crowfall log parser
         link: https://observablehq.com/d/df02f3f553b6b0c6
         link_text: Demo link
         description: | # this will include new lines to allow paragraphs
