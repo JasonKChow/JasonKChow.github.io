@@ -3,54 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>si — Jason K Chow</title>
-  <meta name="description" content="Quick links for Jason K Chow" />
+  <title>si — links</title>
+  <meta name="description" content="Short link page (editable links array)" />
   <style>
-    :root{--bg:#f7f7f8;--card:#111827;--accent:#111827;--muted:#6b7280}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;background:var(--bg);color:#111}
-    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:4vh 16px}
-    .card{width:100%;max-width:560px;background:#fff;border-radius:14px;padding:32px 28px;box-shadow:0 6px 24px rgba(16,24,40,0.08);text-align:center}
-    h1{margin:0;font-size:22px}
-    p.subtitle{margin:8px 0 20px;color:var(--muted)}
-    .links{display:flex;flex-direction:column;gap:12px}
-    .btn{display:inline-block;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:600;color:var(--card);background:#f3f4f6;border:1px solid #e6e7ea}
-    .btn.primary{background:var(--card);color:#fff;border:0}
-    .small{font-size:13px;color:var(--muted);margin-top:18px}
-    footer{margin-top:18px;font-size:13px;color:var(--muted)}
-    @media (prefers-color-scheme:dark){:root{--bg:#0b1220;--card:#0b1220;--accent:#1f2937;--muted:#94a3b8} body{background:linear-gradient(180deg,#071029 0,#071029 100%);color:#e6eef8} .card{background:linear-gradient(180deg,#051428 0,#081827 100%);box-shadow:none}.btn{background:#07122a;color:#e6eef8;border:1px solid rgba(255,255,255,0.04)} .btn.primary{background:#1f2937}}
+    :root{--bg:#fff;--text:#0b1220;--muted:#6b7280;--btn:#111827}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px}
+    .box{width:100%;max-width:520px}
+    h1{margin:0 0 6px;font-size:20px}
+    p.desc{margin:0 0 18px;color:var(--muted)}
+    .links{display:flex;flex-direction:column;gap:10px}
+    .link{display:block;padding:12px 14px;border-radius:10px;text-decoration:none;background:#f3f4f6;color:var(--text);font-weight:600;border:1px solid #e8e9ee}
+    .link.blank{background:var(--btn);color:#fff;border:0}
+    .hint{margin-top:14px;color:var(--muted);font-size:13px}
+    pre{background:#0f1724;color:#e6eef8;padding:10px;border-radius:8px;overflow:auto;font-size:13px}
+    @media (prefers-color-scheme:dark){:root{--bg:#071025;--text:#e6eef8;--muted:#93a6bf;--btn:#1f2937} .link{background:#07122a;border:1px solid rgba(255,255,255,0.04)} .link.blank{background:#1f2937}}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="card">
+    <div class="box">
       <h1>si</h1>
-      <p class="subtitle">Short links — share this URL with people: <code>/si</code></p>
+      <p class="desc">A tiny, editable short-link page. Edit the links array in the source to add or change entries.</p>
 
-      <!-- EDIT THESE LINKS: replace href values with your actual profiles -->
-      <div class="links">
-        <a class="btn primary" href="https://github.com/JasonKChow" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="https://jasonkchow.github.io/" target="_blank" rel="noopener">Blog / Website</a>
-        <a class="btn" href="/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-        <a class="btn" href="#" id="email-link">Email</a>
-        <a class="btn" href="#" id="linkedin-link">LinkedIn</a>
-        <a class="btn" href="#" id="other-link">Other</a>
+      <div id="links" class="links" aria-live="polite">
+        <!-- links will be rendered here -->
       </div>
 
-      <div class="small">Tip: edit <code>si/index.html</code> in the repo to change these targets.</div>
-      <footer>Not linked from the rest of the site — this is a standalone page.</footer>
+      <div class="hint">Edit the <code>links</code> array at the top of <code>si/index.html</code> — each item needs a <code>text</code> and <code>url</code>. Set <code>blank:true</code> to open in a new tab.</div>
+
+      <noscript>
+        <p style="color:var(--muted)">JavaScript is required to render the links. Example edit in the file:</p>
+        <pre>const links = [{ text: 'GitHub', url: 'https://github.com' }, { text: 'Blog', url: 'https://example.com', blank: true }]</pre>
+      </noscript>
     </div>
   </div>
 
   <script>
-    // Lightweight convenience: fill placeholders if you set the following JS variables
-    // Replace values below or remove the script entirely if you don't want defaults.
-    (function(){
-      const email = '';
-      const linkedin = '';
-      const other = '';
-      if(email){document.getElementById('email-link').href = 'mailto:'+email; document.getElementById('email-link').textContent = (email.indexOf('@')>-1?email:'Email');}
-      if(linkedin){document.getElementById('linkedin-link').href = linkedin; document.getElementById('linkedin-link').textContent = 'LinkedIn';}
-      if(other){document.getElementById('other-link').href = other; document.getElementById('other-link').textContent = other}
+    /*
+      EASY EDITS
+      - To add/remove links, edit the `links` array below.
+      - Each item: { text: 'Label', url: 'https://...', blank: true }
+      - Save the file to update the page at /si
+    */
+
+    const links = [
+      // Example entries — replace these with your targets
+      { text: 'GitHub', url: 'https://github.com/JasonKChow', blank: true },
+      { text: 'Website', url: 'https://jasonkchow.github.io/', blank: true },
+      { text: 'Resume (PDF)', url: '/resume.pdf', blank: true }
+    ];
+
+    (function render(){
+      const container = document.getElementById('links');
+      container.innerHTML = '';
+      links.forEach(l => {
+        if(!l || !l.url || !l.text) return;
+        const a = document.createElement('a');
+        a.className = 'link' + (l.blank ? ' blank' : '');
+        a.href = l.url;
+        a.textContent = l.text;
+        if(l.blank) a.target = '_blank';
+        a.rel = 'noopener';
+        container.appendChild(a);
+      });
     })();
   </script>
 </body>
