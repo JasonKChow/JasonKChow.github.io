@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>si — links</title>
-  <meta name="description" content="Short link page (editable links array)" />
+  <title>Links</title>
+  <meta name="description" content="Links" />
   <style>
     :root{--bg:#fff;--text:#0b1220;--muted:#6b7280;--btn:#111827}
     html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans",sans-serif;background:var(--bg);color:var(--text)}
@@ -23,14 +23,12 @@
 <body>
   <div class="wrap">
     <div class="box">
-      <h1>si</h1>
-      <p class="desc">A tiny, editable short-link page. Edit the links array in the source to add or change entries.</p>
+      <h1>Links</h1>
+
 
       <div id="links" class="links" aria-live="polite">
         <!-- links will be rendered here -->
       </div>
-
-      <div class="hint">Edit the <code>links</code> array at the top of <code>si/index.html</code> — each item needs a <code>text</code> and <code>url</code>. Set <code>blank:true</code> to open in a new tab.</div>
 
       <noscript>
         <p style="color:var(--muted)">JavaScript is required to render the links. Example edit in the file:</p>
@@ -49,9 +47,8 @@
 
     const links = [
       // Example entries — replace these with your targets
-      { text: 'GitHub', url: 'https://github.com/JasonKChow', blank: true },
-      { text: 'Website', url: 'https://jasonkchow.github.io/', blank: true },
-      { text: 'Resume (PDF)', url: '/resume.pdf', blank: true }
+      { text: 'Targeting', url: 'https://sheng-shen.github.io/data/fitts/index.html', blank: true },
+      { text: 'Scrolling', url: 'https://sheng-shen.github.io/data/fitts/scroll.html', blank: true }
     ];
 
     (function render(){
